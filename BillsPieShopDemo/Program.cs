@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 // EF Core SQL Server Database
 builder.Services.AddDbContext<BillsPieShopDbContext>(options => {
     options.UseSqlServer(
-        builder.Configuration["ConnectionStrings:BillsPieShopDbConnection"]);
+        builder.Configuration["ConnectionStrings:BillsPieShopDbContextConnection"]);
 });
 
 var app = builder.Build();
