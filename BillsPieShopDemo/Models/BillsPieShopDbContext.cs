@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace BillsPieShopDemo.Models
+{
+    public class BillsPieShopDbContext: DbContext
+    {
+        // Constructor
+        public BillsPieShopDbContext(DbContextOptions<BillsPieShopDbContext> options) : base(options)
+        {
+        }
+
+        // DbSets
+        public DbSet<Pie> Pies { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+    }
+}
