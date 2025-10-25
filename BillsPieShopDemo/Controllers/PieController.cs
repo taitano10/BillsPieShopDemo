@@ -1,4 +1,5 @@
 ﻿using BillsPieShopDemo.Models;
+using BillsPieShopDemo.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BillsPieShopDemo.Controllers
@@ -16,8 +17,8 @@ namespace BillsPieShopDemo.Controllers
 
         public IActionResult List()
         {
-            var pies = _pieRepository.AllPies;
-            return View(pies);
+            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "All Pies");
+            return View(piesListViewModel);
         }
     }
 }
