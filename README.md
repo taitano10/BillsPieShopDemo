@@ -2,6 +2,8 @@
 
 # 🥧 Bill’s Pie Shop Demo
 
+![Bill’s Pie Shop Screenshot](https://storagebillspieshop.blob.core.windows.net/images/billspieshop/BillsPieShop.png)
+
 A full-stack **ASP.NET Core MVC** web application showcasing clean architecture, data-driven design, and a complete shopping experience — from browsing pies to placing orders.
 Built as a modern .NET sample for portfolios, technical interviews, and Azure deployment practice.
 
