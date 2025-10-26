@@ -12,7 +12,7 @@ builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddRazorPages(); // Razor Pages services
 // EF Core SQL Server Database
 builder.Services.AddDbContext<BillsPieShopDbContext>(options => {
     options.UseSqlServer(
@@ -33,6 +33,7 @@ if (app.Environment.IsDevelopment())
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages(); // Razor Pages middleware
 
 DbInitializer.Seed(app);
 app.Run();

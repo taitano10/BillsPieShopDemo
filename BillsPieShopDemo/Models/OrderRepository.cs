@@ -5,9 +5,9 @@
         private readonly BillsPieShopDbContext _billsPieShopDbContext;
         private readonly IShoppingCart _shoppingCart;
 
-        public OrderRepository(BillsPieShopDbContext bethanysPieShopDbContext, IShoppingCart shoppingCart)
+        public OrderRepository(BillsPieShopDbContext billsPieShopDbContext, IShoppingCart shoppingCart)
         {
-            _billsPieShopDbContext = bethanysPieShopDbContext;
+            _billsPieShopDbContext = billsPieShopDbContext;
             _shoppingCart = shoppingCart;
         }
 
