@@ -1,8 +1,10 @@
 using BillsPieShopDemo.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("BillsPieShopDbContextConnection") ?? throw new InvalidOperationException("Connection string 'BillsPieShopDbContextConnection' not found.");
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
@@ -25,10 +27,13 @@ builder.Services.AddDbContext<BillsPieShopDbContext>(options => {
         builder.Configuration["ConnectionStrings:BillsPieShopDbContextConnection"]);
 });
 
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<BillsPieShopDbContext>();
+
 var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseSession();
+app.UseAuthentication();
 
 if (app.Environment.IsDevelopment())
 {

@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace BillsPieShopDemo.Models
 {
-    public class BillsPieShopDbContext: DbContext
+    public class BillsPieShopDbContext: IdentityDbContext
     {
         // Constructor
         public BillsPieShopDbContext(DbContextOptions<BillsPieShopDbContext> options) : base(options)
