@@ -206,16 +206,6 @@ Then visit **[http://localhost:8080](http://localhost:8080)**
 
 ---
 
-## 📸 Screenshots
-
-| Home Page                                              | Product Detail                                             | Shopping Cart                                          | Checkout                                                       |
-| ------------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------- |
-| ![Home](https://via.placeholder.com/250x150?text=Home) | ![Detail](https://via.placeholder.com/250x150?text=Detail) | ![Cart](https://via.placeholder.com/250x150?text=Cart) | ![Checkout](https://via.placeholder.com/250x150?text=Checkout) |
-
-> Replace these with screenshots from your running Azure site.
-
----
-
 ## 🧭 Roadmap
 
 * [ ] Admin area for pie management
